@@ -3,7 +3,7 @@ export const site = {
   company: "Paragon Labs",
   tagline: "Experiencias digitales inmersivas",
   description:
-    "Estudio creativo-tecnológico de AR, 3D, animación, IA e influencers digitales. Paragon Labs · México.",
+    "Estudio creativo-tecnológico de AR, 3D, video, animación, IA e influencers digitales. Paragon Labs · México.",
   url: "https://inmerzion.digital",
   email: "hola@paragonlabs.mx",
   phoneDisplay: "+52 (667) 302 2370",
@@ -19,51 +19,88 @@ export const navLinks = [
   { href: "/contacto", label: "Contacto" },
 ] as const;
 
-export const capabilities = [
+/** Home capabilities + /servicios cards — same offerings, shared source. */
+export const offerings = [
   {
-    slug: "ar",
-    title: "WebAR y realidad aumentada",
+    slug: "filtros-ar",
+    title: "Filtros AR para redes",
     description:
-      "Visualizadores de producto en el navegador: prueba, escala y compra sin instalar apps.",
+      "Lentes y efectos de marca para Snapchat, Instagram y TikTok: face filters y experiencias AR listas para campaña.",
   },
   {
-    slug: "3d",
-    title: "3D y entornos digitales",
+    slug: "ar-muebles",
+    title: "AR para muebles",
     description:
-      "Modelado, renders y espacios interactivos listos para web, catálogos y campañas.",
+      "Coloca el producto a escala real en la habitación (WebAR o app). Catálogo interactivo para retail y e-commerce.",
   },
   {
-    slug: "animation",
+    slug: "ar-arquitectura",
+    title: "AR para arquitectura y diseño",
+    description:
+      "Visualización de espacios, maquetas, interiorismo y walkthroughs para proyectos y presentaciones.",
+  },
+  {
+    slug: "try-on",
+    title: "Try-on AR",
+    description:
+      "Prueba virtual de moda y beauty: maquillaje, accesorios y prendas sobre el usuario en tiempo real.",
+  },
+  {
+    slug: "webar-ecommerce",
+    title: "WebAR para e-commerce",
+    description:
+      "Catálogos y fichas de producto en el navegador: ver, escalar y explorar sin instalar apps.",
+  },
+  {
+    slug: "escaneo-3d",
+    title: "Escaneo 3D",
+    description:
+      "Captura de productos y espacios en 3D para catálogos, AR, renders y activos digitales reutilizables.",
+  },
+  {
+    slug: "showrooms",
+    title: "Showrooms virtuales",
+    description:
+      "Espacios digitales para recorrer colecciones, lanzamientos y experiencias de marca a distancia.",
+  },
+  {
+    slug: "activaciones",
+    title: "Activaciones de marca",
+    description:
+      "Campañas QR → AR: empaque, POP y outdoor que abren una experiencia aumentada en el celular.",
+  },
+  {
+    slug: "video",
+    title: "Producción completa de video",
+    description:
+      "Spots, contenido para marcas y series cortas: guion, producción y entrega listos para pantallas y redes.",
+  },
+  {
+    slug: "cortometrajes",
+    title: "Cortometrajes y motion cinema",
+    description:
+      "Piezas narrativas y cinematográficas con motion design: historias cortas con identidad de estudio.",
+  },
+  {
+    slug: "animacion",
     title: "Animación y contenido digital",
     description:
-      "Motion, piezas para redes y narrativas visuales con identidad de marca.",
+      "Motion, loops y piezas editoriales para campañas, landings y storytelling de marca.",
   },
   {
-    slug: "ai",
-    title: "IA e influencers digitales",
+    slug: "ai-influencers",
+    title: "Influencers digitales y assets 3D",
     description:
-      "Personas virtuales, contenido asistido por IA y presencia digital consistente.",
+      "Talentos virtuales, pipelines de contenido con IA y assets 3D con identidad propia — como Lala Softfit.",
   },
 ] as const;
 
-export const services = [
-  {
-    title: "Visualizadores AR de producto",
-    body: "Experiencias WebAR para que tus clientes vean el producto en su espacio real desde el celular. Ideal para retail, muebles, belleza y empaque.",
-  },
-  {
-    title: "Producción 3D",
-    body: "Assets, escenas y renders para e-commerce, lanzamientos y presentaciones. Optimizados para web y redes.",
-  },
-  {
-    title: "Animación y digital",
-    body: "Secuencias animadas, loops y piezas editoriales para campañas, landing pages y storytelling de marca.",
-  },
-  {
-    title: "IA e influencers digitales",
-    body: "Diseño de talentos digitales, pipelines de contenido y activaciones con identidad propia — como Lala Softfit.",
-  },
-] as const;
+export const capabilities = offerings;
+
+export const services = offerings.map(({ title, description }) => ({
+  title,
+  body: description,
+}));
 
 export const lalaLinks = [
   {
