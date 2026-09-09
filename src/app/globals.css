@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #071016;
+  --ink-soft: #0e1a22;
+  --surface: #12202a;
+  --line: rgba(180, 220, 230, 0.14);
+  --fog: #c5d5dc;
+  --mist: #8aa0ab;
+  --mint: #3ecfb0;
+  --mint-deep: #1fa88c;
+  --sand: #e8dcc8;
+  --white: #f4f7f8;
+  --background: var(--ink);
+  --foreground: var(--white);
+  --font-display: var(--font-syne);
+  --font-body: var(--font-figtree);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-fog: var(--fog);
+  --color-mist: var(--mist);
+  --color-mint: var(--mint);
+  --color-mint-deep: var(--mint-deep);
+  --color-sand: var(--sand);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--mint) 45%, transparent);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-shell {
+  position: relative;
+  isolation: isolate;
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
+.site-shell::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 80% 55% at 12% -10%, rgba(62, 207, 176, 0.18), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 88% 8%, rgba(232, 220, 200, 0.08), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(31, 168, 140, 0.1), transparent 55%),
+    linear-gradient(165deg, #071016 0%, #0b161d 45%, #0a141a 100%);
+}
+
+.site-shell::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-line {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-rise-delay-1 {
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.animate-rise-delay-2 {
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+.animate-rise-delay-3 {
+  animation: rise-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+}
+
+.animate-drift {
+  animation: soft-drift 7s ease-in-out infinite;
+}
+
+.animate-pulse-line {
+  animation: pulse-line 3.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .animate-rise-delay-1,
+  .animate-rise-delay-2,
+  .animate-rise-delay-3,
+  .animate-drift,
+  .animate-pulse-line {
+    animation: none !important;
+  }
+}
+
+/* Lala soft-girl theme */
+.lala-theme {
+  --lala-cream: #f6efe6;
+  --lala-cream-deep: #ebe1d4;
+  --lala-sage: #8fa88a;
+  --lala-sage-deep: #6f8a6c;
+  --lala-blush: #e8c4b8;
+  --lala-ink: #3d4a3f;
+  --lala-muted: #6d7a6f;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% -20%, rgba(232, 196, 184, 0.45), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 30%, rgba(143, 168, 138, 0.22), transparent 50%),
+    linear-gradient(180deg, #f8f2ea 0%, #f3ebe1 40%, #ebe4d8 100%);
+  color: var(--lala-ink);
+  min-height: 100dvh;
+}
+
+.lala-theme a:focus-visible,
+.site-shell a:focus-visible,
+.site-shell button:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 3px;
+}
+
+.lala-theme a:focus-visible {
+  outline-color: var(--lala-sage-deep);
+}
