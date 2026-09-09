@@ -23,7 +23,7 @@ npm start
 | Ruta | Descripción |
 |------|-------------|
 | `/` | Home: hero, capacidades, CTA de contacto |
-| `/servicios` | AR, 3D, animación/digital, IA e influencers |
+| `/servicios` | AR, apps/juegos, 3D, video, animación, IA e influencers |
 | `/influencers` | Oferta de influencers digitales + Lala |
 | `/lala` | Hub tipo Linktree de @lala.softfit (afiliados) |
 | `/contacto` | Correo, teléfono y mailto |

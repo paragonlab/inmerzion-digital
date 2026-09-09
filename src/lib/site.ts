@@ -70,6 +70,12 @@ export const offerings = [
       "Campañas QR → AR: empaque, POP y outdoor que abren una experiencia aumentada en el celular.",
   },
   {
+    slug: "apps-juegos",
+    title: "Apps con experiencias inmersivas y juegos",
+    description:
+      "Apps interactivas y experiencias de marca inmersivas para web, iOS y Android: juegos casuales o branded games y piezas jugables. Elegimos el stack según el proyecto (web, Unity u Unreal cuando aporte).",
+  },
+  {
     slug: "video",
     title: "Producción completa de video",
     description:
