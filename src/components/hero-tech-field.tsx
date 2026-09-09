@@ -49,9 +49,9 @@ export function HeroTechField() {
 
     const reduced = prefersReducedMotion();
     const mobile = isMobileViewport();
-    const count = mobile ? 42 : 88;
+    const count = mobile ? 56 : 110;
     const maxDpr = mobile ? 1.25 : 1.5;
-    const connectDist = mobile ? 78 : 108;
+    const connectDist = mobile ? 92 : 124;
 
     let width = 0;
     let height = 0;
@@ -66,8 +66,9 @@ export function HeroTechField() {
     const seed = () => {
       particles.length = 0;
       for (let i = 0; i < count; i++) {
-        const x = (Math.random() - 0.5) * width * 1.15;
-        const y = (Math.random() - 0.5) * height * 1.05;
+        // Bias toward the open right side so the field reads as a hero accent
+        const x = (Math.random() * 0.85 + 0.05) * width * 0.95 - width * 0.25;
+        const y = (Math.random() - 0.5) * height * 0.95;
         const z = Math.random() * 520 + 80;
         const roll = Math.random();
         particles.push({
@@ -77,8 +78,8 @@ export function HeroTechField() {
           ox: x,
           oy: y,
           oz: z,
-          size: Math.random() * 2.2 + 1.1,
-          hue: roll > 0.72 ? "mint" : roll > 0.42 ? "sand" : "fog",
+          size: Math.random() * 2.4 + 1.2,
+          hue: roll > 0.68 ? "mint" : roll > 0.38 ? "sand" : "fog",
         });
       }
     };
@@ -110,8 +111,8 @@ export function HeroTechField() {
       const rz = p.oz + p.ox * 0.08 * sin;
       const perspective = 520 / (520 + rz);
       return {
-        sx: width * 0.58 + (rx + sway) * perspective,
-        sy: height * 0.42 + (p.oy + lift) * perspective,
+        sx: width * 0.66 + (rx + sway) * perspective,
+        sy: height * 0.4 + (p.oy + lift) * perspective,
         scale: perspective,
         depth: rz,
       };
@@ -122,15 +123,15 @@ export function HeroTechField() {
 
       // Soft volumetric wash behind the field
       const wash = ctx.createRadialGradient(
-        width * 0.62,
-        height * 0.38,
-        20,
-        width * 0.62,
-        height * 0.38,
-        Math.max(width, height) * 0.55,
+        width * 0.68,
+        height * 0.36,
+        16,
+        width * 0.68,
+        height * 0.36,
+        Math.max(width, height) * 0.58,
       );
-      wash.addColorStop(0, "rgba(62, 207, 176, 0.07)");
-      wash.addColorStop(0.45, "rgba(232, 220, 200, 0.03)");
+      wash.addColorStop(0, "rgba(62, 207, 176, 0.11)");
+      wash.addColorStop(0.4, "rgba(232, 220, 200, 0.045)");
       wash.addColorStop(1, "rgba(7, 16, 22, 0)");
       ctx.fillStyle = wash;
       ctx.fillRect(0, 0, width, height);
@@ -153,7 +154,7 @@ export function HeroTechField() {
           const dy = a.sy - b.sy;
           const dist = Math.hypot(dx, dy);
           if (dist > connectDist) continue;
-          const alpha = (1 - dist / connectDist) * 0.18 * Math.min(a.scale, b.scale);
+          const alpha = (1 - dist / connectDist) * 0.28 * Math.min(a.scale, b.scale);
           ctx.strokeStyle = `rgba(62, 207, 176, ${alpha})`;
           ctx.beginPath();
           ctx.moveTo(a.sx, a.sy);
@@ -166,14 +167,14 @@ export function HeroTechField() {
       // Voxel-ish cubes / points
       for (const item of projected) {
         const { p, sx, sy, scale } = item;
-        const s = p.size * scale * (mobile ? 1.15 : 1.35);
-        const alpha = 0.28 + scale * 0.45;
+        const s = p.size * scale * (mobile ? 1.35 : 1.55);
+        const alpha = 0.38 + scale * 0.52;
         ctx.fillStyle = colorFor(p.hue, alpha);
 
         // Tiny cube silhouette (reads as voxel without 3D engine)
         const half = s;
         ctx.fillRect(sx - half, sy - half, half * 2, half * 2);
-        ctx.fillStyle = colorFor(p.hue, alpha * 0.55);
+        ctx.fillStyle = colorFor(p.hue, Math.min(1, alpha * 0.7));
         ctx.fillRect(sx - half + s * 0.35, sy - half - s * 0.35, half * 2, half * 0.55);
         ctx.fillRect(sx + half, sy - half - s * 0.2, half * 0.45, half * 2);
       }
