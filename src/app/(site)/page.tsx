@@ -28,8 +28,8 @@ export default function HomePage() {
           <HeroWordmark />
           <p className="animate-rise-delay-1 mt-5 max-w-xl text-lg text-fog md:text-xl">
             Estudio creativo-tecnológico de{" "}
-            <span className="text-sand">AR, 3D, animación, IA</span> e influencers
-            digitales. Hecho en México por {site.company}.
+            <span className="text-sand">AR, 3D, video, animación e IA</span>. Hecho
+            en México por {site.company}.
           </p>
           <div className="animate-rise-delay-2 mt-10 flex flex-wrap items-center gap-4">
             <Link
@@ -54,11 +54,11 @@ export default function HomePage() {
             Capacidades
           </h2>
           <p className="mt-3 max-w-2xl text-mist">
-            Diseñamos y producimos experiencias digitales inmersivas para marcas
-            que quieren verse y sentirse distintas.
+            AR, video, 3D e influencers digitales para marcas que quieren verse y
+            sentirse distintas.
           </p>
 
-          <ul className="mt-14 grid gap-10 sm:grid-cols-2">
+          <ul className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((item) => (
               <li key={item.slug} className="border-t border-line/70 pt-6">
                 <h3 className="font-display text-xl font-semibold text-sand">
