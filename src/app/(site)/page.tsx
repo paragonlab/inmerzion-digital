@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HeroTechField } from "@/components/hero-tech-field";
+import { HeroWordmark } from "@/components/hero-wordmark";
 import { capabilities, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,13 +20,12 @@ export default function HomePage() {
         >
           <div className="absolute -left-24 top-16 h-72 w-72 rounded-full bg-mint/20 blur-3xl animate-drift" />
           <div className="absolute bottom-10 right-0 h-80 w-80 rounded-full bg-sand/10 blur-3xl animate-drift [animation-delay:1.5s]" />
+          <HeroTechField />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-mint/50 to-transparent animate-pulse-line" />
         </div>
 
         <div className="relative mx-auto flex min-h-[calc(100dvh-4.5rem)] max-w-6xl flex-col justify-center px-5 py-16 md:px-8 md:py-20">
-          <p className="animate-rise font-display text-[clamp(3.2rem,12vw,7.5rem)] font-extrabold leading-[0.9] tracking-[-0.04em] text-white">
-            {site.name}
-          </p>
+          <HeroWordmark />
           <p className="animate-rise-delay-1 mt-5 max-w-xl text-lg text-fog md:text-xl">
             Estudio creativo-tecnológico de{" "}
             <span className="text-sand">AR, 3D, animación, IA</span> e influencers
