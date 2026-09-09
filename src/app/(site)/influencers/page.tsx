@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
@@ -53,15 +54,43 @@ export default function InfluencersPage() {
         </ul>
       </section>
 
-      <section className="mt-16 overflow-hidden border border-line/70 bg-surface/40">
-        <div className="grid md:grid-cols-[1.2fr_0.8fr]">
-          <div className="p-8 md:p-12">
+      <section
+        aria-labelledby="featured-talent"
+        className="mt-16 overflow-hidden border border-line/70 bg-surface/40"
+      >
+        <div className="grid md:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-72 bg-ink-soft md:min-h-full">
+            <Image
+              src="/lala-avatar.png"
+              alt="Lala Softfit — influencer digital soft-girl de fitness y lifestyle"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 45vw"
+              className="object-cover object-top"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-surface/40"
+              aria-hidden="true"
+            />
+          </div>
+          <div className="flex flex-col justify-center p-8 md:p-12">
             <p className="text-sm uppercase tracking-[0.18em] text-mint">
-              Caso en vivo
+              Featured talent
             </p>
-            <h2 className="mt-3 font-display text-3xl font-semibold text-white">
+            <h2
+              id="featured-talent"
+              className="mt-3 font-display text-3xl font-semibold text-white md:text-4xl"
+            >
               Lala Softfit
             </h2>
+            <a
+              href="https://www.instagram.com/lala.softfit/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 text-base font-medium text-sand hover:text-mint"
+            >
+              @lala.softfit
+            </a>
             <p className="mt-4 max-w-md text-mist">
               Influencer digital soft-girl de fitness y lifestyle. Síguela en
               Instagram o abre su página de links con recomendaciones afiliadas.
@@ -79,15 +108,8 @@ export default function InfluencersPage() {
                 rel="noopener noreferrer"
                 className="inline-flex border border-line px-5 py-3 text-sm font-medium text-fog hover:border-mint/40 hover:text-white"
               >
-                @lala.softfit
+                Instagram
               </a>
-            </div>
-          </div>
-          <div className="relative min-h-48 bg-gradient-to-br from-sand/20 via-mint/10 to-transparent md:min-h-full">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-6xl font-bold tracking-tight text-white/15 md:text-7xl">
-                Lala
-              </span>
             </div>
           </div>
         </div>
