@@ -5,7 +5,7 @@ import { services, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Filtros AR, WebAR, video, cortometrajes, escaneo 3D, showrooms e influencers digitales por Inmerzion · Paragon Labs.",
+    "Filtros AR, WebAR, apps inmersivas y juegos, video, cortometrajes, escaneo 3D, showrooms e influencers digitales por Inmerzion · Paragon Labs.",
   alternates: { canonical: "/servicios" },
 };
 
@@ -17,8 +17,8 @@ export default function ServiciosPage() {
         Producción inmersiva de punta a punta
       </h1>
       <p className="mt-5 max-w-2xl text-lg text-mist">
-        De filtros AR en redes a video, cortometrajes y talentos digitales:
-        producimos las piezas y experiencias que tu marca necesita.
+        De filtros AR en redes a apps, juegos, video, cortometrajes y talentos
+        digitales: producimos las piezas y experiencias que tu marca necesita.
       </p>
 
       <div className="mt-16 space-y-0">
