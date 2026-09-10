@@ -16,13 +16,13 @@ export function HeroWordmark() {
   }, []);
 
   return (
-    <p
+    <h1
       className={`hero-wordmark animate-rise font-display text-[clamp(3.2rem,12vw,7.5rem)] font-extrabold leading-[0.9] tracking-[-0.04em] text-white${
         canGlitch ? " hero-wordmark--glitch" : ""
       }`}
       data-text={site.name}
     >
       {site.name}
-    </p>
+    </h1>
   );
 }

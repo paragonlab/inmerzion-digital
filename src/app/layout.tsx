@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Figtree, Syne } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { JsonLd } from "@/components/JsonLd";
+import { defaultOgImage, siteJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -30,19 +34,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: site.locale,
-    url: site.url,
     siteName: site.name,
     title: `${site.name} · ${site.company}`,
     description: site.description,
+    images: [defaultOgImage],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} · ${site.company}`,
     description: site.description,
+    images: [defaultOgImage.url],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  other: {
+    "llms-txt": "/llms.txt",
   },
 };
 
@@ -53,7 +61,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={site.lang} className={`${syne.variable} ${figtree.variable} h-full`}>
-      <body className="min-h-full antialiased">{children}</body>
+      <head>
+        <link rel="llms-txt" href="/llms.txt" />
+      </head>
+      <body className="min-h-full antialiased">
+        <JsonLd data={siteJsonLd()} />
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

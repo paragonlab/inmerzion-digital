@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { lalaPersonJsonLd, pageSocialMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
+const title = `Influencers digitales · ${site.name}`;
+const description =
+  "Creamos e impulsamos influencers digitales con identidad, contenido y activaciones. Conoce a Lala Softfit.";
+
 export const metadata: Metadata = {
-  title: "Influencers digitales",
-  description:
-    "Creamos e impulsamos influencers digitales con identidad, contenido y activaciones. Conoce a Lala Softfit.",
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/influencers" },
+  ...pageSocialMetadata({ title, description, path: "/influencers" }),
 };
 
 export default function InfluencersPage() {
   return (
     <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <JsonLd data={lalaPersonJsonLd()} />
       <p className="text-sm uppercase tracking-[0.2em] text-mint">Influencers</p>
       <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold tracking-tight text-white md:text-5xl">
         Talentos digitales con personalidad de estudio
