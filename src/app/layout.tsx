@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "m4cexRq7rHQNNoL6ZK_D9g0sb0A1AKbxPW1zXY48Das",
+  },
   other: {
     "llms-txt": "/llms.txt",
   },
