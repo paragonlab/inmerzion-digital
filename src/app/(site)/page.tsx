@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroTechField } from "@/components/hero-tech-field";
 import { HeroWordmark } from "@/components/hero-wordmark";
+import { pageSocialMetadata } from "@/lib/seo";
 import { capabilities, site } from "@/lib/site";
 
+const title = `${site.name} · ${site.company}`;
+const description = site.description;
+
 export const metadata: Metadata = {
-  title: "Inicio",
-  description: site.description,
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/" },
+  ...pageSocialMetadata({ title, description, path: "/" }),
 };
 
 export default function HomePage() {

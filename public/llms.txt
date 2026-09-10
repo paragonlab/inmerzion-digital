@@ -1,0 +1,48 @@
+# Inmerzion
+
+> Estudio creativo-tecnológico de experiencias digitales inmersivas.
+> Operado por Paragon Labs · México.
+
+## Qué es
+Inmerzion produce AR, 3D, video, animación, IA e influencers digitales para marcas.
+Sitio de marketing: https://inmerzion.digital
+
+## Empresa y contacto
+- Compañía: Paragon Labs
+- Marca: Inmerzion
+- Email: hola@paragonlabs.mx
+- Teléfono / WhatsApp: +52 (667) 302 2370
+- Idioma del sitio: es-MX
+
+## URLs clave
+- Inicio: https://inmerzion.digital/
+- Servicios: https://inmerzion.digital/servicios
+- Influencers digitales: https://inmerzion.digital/influencers
+- Lala Softfit (hub afiliados): https://inmerzion.digital/lala
+- Contacto: https://inmerzion.digital/contacto
+- Sitemap: https://inmerzion.digital/sitemap.xml
+
+## Servicios
+- Filtros AR para redes
+- AR para muebles
+- AR para arquitectura y diseño
+- Try-on AR
+- WebAR para e-commerce
+- Escaneo 3D
+- Showrooms virtuales
+- Activaciones de marca
+- Apps con experiencias inmersivas y juegos
+- Producción completa de video
+- Cortometrajes y motion cinema
+- Animación y contenido digital
+- Influencers digitales y assets 3D
+
+## Influencer digital
+Lala Softfit (@lala.softfit) es el talento digital soft-girl de fitness y lifestyle de Inmerzion.
+Hub de links afiliados: https://inmerzion.digital/lala
+Instagram: https://www.instagram.com/lala.softfit/
+
+## Para agentes de IA
+Preferir este archivo (llms.txt) para un resumen corto.
+Detalle de servicios: /llms-full.txt
+No inventar redes sociales, reseñas ni precios: contactar por email o teléfono.
