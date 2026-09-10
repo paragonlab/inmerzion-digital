@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Figtree, Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { CookieConsent } from "@/components/CookieConsent";
+import {
+  GoogleAnalytics,
+  consentDefaultInlineScript,
+} from "@/components/GoogleAnalytics";
 import { JsonLd } from "@/components/JsonLd";
 import { defaultOgImage, siteJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -66,10 +71,16 @@ export default function RootLayout({
     <html lang={site.lang} className={`${syne.variable} ${figtree.variable} h-full`}>
       <head>
         <link rel="llms-txt" href="/llms.txt" />
+        <script
+          id="ga-consent-default"
+          dangerouslySetInnerHTML={{ __html: consentDefaultInlineScript }}
+        />
       </head>
       <body className="min-h-full antialiased">
         <JsonLd data={siteJsonLd()} />
         {children}
+        <GoogleAnalytics />
+        <CookieConsent />
         <Analytics />
         <SpeedInsights />
       </body>
