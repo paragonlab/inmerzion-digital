@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
+const title = `Contacto · ${site.name}`;
+const description = `Contacta a ${site.name} (${site.company}): ${site.email} · ${site.phoneDisplay}`;
+
 export const metadata: Metadata = {
-  title: "Contacto",
-  description: `Contacta a ${site.name} (${site.company}): ${site.email} · ${site.phoneDisplay}`,
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/contacto" },
+  ...pageSocialMetadata({ title, description, path: "/contacto" }),
 };
 
 export default function ContactoPage() {

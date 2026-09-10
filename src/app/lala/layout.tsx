@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Quicksand } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
+import { lalaPersonJsonLd } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -15,20 +18,23 @@ const quicksand = Quicksand({
   display: "swap",
 });
 
+const ogTitle = "Lala Softfit · @lala.softfit";
+const ogDescription =
+  "Mis favoritos soft-girl: termo, leggings, skincare y más. Links de afiliado en un solo lugar.";
+
 export const metadata: Metadata = {
   title: {
-    absolute: "Lala Softfit · @lala.softfit",
+    absolute: ogTitle,
   },
   description:
     "Links afiliados y recomendaciones de Lala Softfit — influencer digital soft-girl de fitness y lifestyle. Instagram @lala.softfit.",
   alternates: { canonical: "/lala" },
   openGraph: {
-    title: "Lala Softfit · @lala.softfit",
-    description:
-      "Mis favoritos soft-girl: termo, leggings, skincare y más. Links de afiliado en un solo lugar.",
-    url: "/lala",
-    siteName: "Inmerzion",
-    locale: "es_MX",
+    title: ogTitle,
+    description: ogDescription,
+    url: `${site.url}/lala`,
+    siteName: site.name,
+    locale: site.locale,
     type: "website",
     images: [
       {
@@ -41,9 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lala Softfit · @lala.softfit",
-    description:
-      "Mis favoritos soft-girl: termo, leggings, skincare y más. Links de afiliado en un solo lugar.",
+    title: ogTitle,
+    description: ogDescription,
     images: ["/lala/opengraph-image"],
   },
 };
@@ -60,6 +65,7 @@ export default function LalaLayout({
         fontFamily: "var(--font-lala-body), system-ui, sans-serif",
       }}
     >
+      <JsonLd data={lalaPersonJsonLd()} />
       {children}
     </div>
   );

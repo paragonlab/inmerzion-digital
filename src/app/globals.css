@@ -152,6 +152,7 @@ a {
 .hero-wordmark {
   position: relative;
   isolation: isolate;
+  margin: 0;
 }
 
 .hero-wordmark--glitch::before,

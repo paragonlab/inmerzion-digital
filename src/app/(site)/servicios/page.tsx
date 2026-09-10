@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageSocialMetadata } from "@/lib/seo";
 import { services, site } from "@/lib/site";
 
+const title = `Servicios · ${site.name}`;
+const description =
+  "Filtros AR, WebAR, apps inmersivas y juegos, video, cortometrajes, escaneo 3D, showrooms e influencers digitales por Inmerzion · Paragon Labs.";
+
 export const metadata: Metadata = {
-  title: "Servicios",
-  description:
-    "Filtros AR, WebAR, apps inmersivas y juegos, video, cortometrajes, escaneo 3D, showrooms e influencers digitales por Inmerzion · Paragon Labs.",
+  title: { absolute: title },
+  description,
   alternates: { canonical: "/servicios" },
+  ...pageSocialMetadata({ title, description, path: "/servicios" }),
 };
 
 export default function ServiciosPage() {

@@ -1,0 +1,74 @@
+# Inmerzion — guía ampliada para agentes de IA
+
+Sitio: https://inmerzion.digital
+Empresa: Paragon Labs (México)
+Marca comercial: Inmerzion
+Contacto: hola@paragonlabs.mx · +52 (667) 302 2370 · tel:+526673022370
+Idioma: es-MX
+
+## Resumen
+Inmerzion es un estudio creativo-tecnológico que diseña y produce experiencias digitales inmersivas: realidad aumentada, 3D, video, animación, IA e influencers digitales. El sitio es de marketing (no hay tienda ni app store propia en estas URLs).
+
+## Mapa del sitio
+| Ruta | Contenido |
+|------|-----------|
+| / | Home: propuesta de valor + listado de capacidades |
+| /servicios | Catálogo completo de servicios con descripciones |
+| /influencers | Oferta de influencers digitales; featured: Lala Softfit |
+| /lala | Hub de links afiliados de Lala Softfit (no es Linktree) |
+| /contacto | Email y teléfono / WhatsApp |
+
+## Catálogo de servicios (fuente canónica del sitio)
+
+### Filtros AR para redes
+Lentes y efectos de marca para Snapchat, Instagram y TikTok: face filters y experiencias AR listas para campaña.
+
+### AR para muebles
+Coloca el producto a escala real en la habitación (WebAR o app). Catálogo interactivo para retail y e-commerce.
+
+### AR para arquitectura y diseño
+Visualización de espacios, maquetas, interiorismo y walkthroughs para proyectos y presentaciones.
+
+### Try-on AR
+Prueba virtual de moda y beauty: maquillaje, accesorios y prendas sobre el usuario en tiempo real.
+
+### WebAR para e-commerce
+Catálogos y fichas de producto en el navegador: ver, escalar y explorar sin instalar apps.
+
+### Escaneo 3D
+Captura de productos y espacios en 3D para catálogos, AR, renders y activos digitales reutilizables.
+
+### Showrooms virtuales
+Espacios digitales para recorrer colecciones, lanzamientos y experiencias de marca a distancia.
+
+### Activaciones de marca
+Campañas QR → AR: empaque, POP y outdoor que abren una experiencia aumentada en el celular.
+
+### Apps con experiencias inmersivas y juegos
+Apps interactivas y experiencias de marca inmersivas para web, iOS y Android: juegos casuales o branded games y piezas jugables. Stack según proyecto (web, Unity u Unreal cuando aporte).
+
+### Producción completa de video
+Spots, contenido para marcas y series cortas: guion, producción y entrega listos para pantallas y redes.
+
+### Cortometrajes y motion cinema
+Piezas narrativas y cinematográficas con motion design: historias cortas con identidad de estudio.
+
+### Animación y contenido digital
+Motion, loops y piezas editoriales para campañas, landings y storytelling de marca.
+
+### Influencers digitales y assets 3D
+Talentos virtuales, pipelines de contenido con IA y assets 3D con identidad propia — como Lala Softfit.
+
+## Lala Softfit
+- Nombre: Lala Softfit
+- Handle: @lala.softfit
+- Tipo: influencer digital (soft-girl, fitness y lifestyle)
+- Página: https://inmerzion.digital/lala
+- Instagram: https://www.instagram.com/lala.softfit/
+- Rol: talento virtual de Inmerzion / Paragon Labs; hub de recomendaciones con enlaces de afiliado
+- No inventar otros perfiles sociales ni métricas de audiencia
+
+## Cómo citar / enlazar
+Usar siempre URLs absolutas bajo https://inmerzion.digital.
+Para contacto comercial: mailto:hola@paragonlabs.mx o el teléfono publicado.
+No afirmar certificaciones, premios, ratings ni clientes sin evidencia en el sitio.
